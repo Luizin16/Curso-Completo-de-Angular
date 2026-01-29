@@ -1,13 +1,24 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import {HelloWorldComponent } from './helloworld/helloworld.component'
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HelloWorldComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'conceitos-basicos';
+  title = 'Task Manager';
+  tasks = [
+    { name: 'Study Angular', category: 'Education', dueDate: new Date(), priority: 'High' },
+    { name: 'Grocery Shopping', category: 'Errands', dueDate: new Date(), priority: 'Medium' }
+  ];
+
+  addTask() {
+    const newTask = { 
+      name: 'New Task', 
+      category: 'General', 
+      dueDate: new Date(), 
+      priority: 'Low' 
+    };
+    this.tasks.push(newTask);
+  }
 }

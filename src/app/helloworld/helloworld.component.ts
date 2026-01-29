@@ -1,10 +1,10 @@
-import { Component } from '@angular/core'
+import { Component } from '@angular/core';
 
 @Component({
-    selector: 'hello-world',
-    template: '<h1>Hello World! 2</h1>'
+  selector: 'hello-world',
+  standalone: true,  // Componente independente
+  imports: [],
+  template: '<h1>Hello World! 2</h1>' 
 })
-
 export class HelloWorldComponent {
-
 }
